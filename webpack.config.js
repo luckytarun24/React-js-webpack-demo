@@ -5,6 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "[name].js",
+    publicPath: "/",
     clean: true,
     assetModuleFilename: "[name][ext]",
   },
@@ -37,7 +38,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Webpack App",
-      filename: "src/index.html",
+      template: "public/index.html",
     }),
   ],
 };
